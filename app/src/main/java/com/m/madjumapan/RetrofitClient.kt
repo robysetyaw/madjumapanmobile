@@ -7,18 +7,16 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
     private var retrofit: Retrofit? = null
-    const val BASE_URL = "todo"
+    private const val BASE_URL = "http://192.168.18.14/inventory_daging/backend/laravel/public/"
 
 
     fun retrofitClient(): Retrofit? {
         if (retrofit == null) {
-            var gson = GsonBuilder()
-                .setLenient()
-                .create()
+
 
             retrofit = Retrofit.Builder()
                 .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(gson))
+                .addConverterFactory(GsonConverterFactory.create())
                 .build()
         }
 

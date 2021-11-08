@@ -1,0 +1,44 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <item-->
+<!--        android:id="@+id/page_1"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/icon_1"-->
+<!--        android:title="@string/text_label_1"/>-->
+<!--    <item-->
+<!--        android:id="@+id/page_2"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/icon_2"-->
+<!--        android:title="@string/text_label_2"/>-->
+    <item
+        android:id="@+id/page_1"
+        android:enabled="true"
+        android:title="stock"
+        android:icon="@drawable/warehouse"
+        />
+    <item
+        android:id="@+id/page_2"
+        android:enabled="true"
+        android:title="transaksi"
+        android:icon="@drawable/warehouse"
+        />
+<!--    <item-->
+<!--        android:id="@+id/page_3"-->
+<!--        android:enabled="true"-->
+<!--        android:title="pembukuan"/>-->
+<!--    <item-->
+<!--        android:id="@+id/page_4"-->
+<!--        android:enabled="true"-->
+<!--        android:title="customer"/>-->
+<!--    <item-->
+<!--        android:id="@+id/page_5"-->
+<!--        android:enabled="true"-->
+<!--        android:title="supplier"/>-->
+<!--    <item-->
+<!--        android:id="@+id/page_6"-->
+<!--        android:enabled="true"-->
+<!--        android:title="user"/>-->
+
+
+
+
+</menu>
