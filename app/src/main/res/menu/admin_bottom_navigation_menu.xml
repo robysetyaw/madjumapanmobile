@@ -21,10 +21,18 @@
         android:title="transaksi"
         android:icon="@drawable/warehouse"
         />
-<!--    <item-->
-<!--        android:id="@+id/page_3"-->
-<!--        android:enabled="true"-->
-<!--        android:title="pembukuan"/>-->
+    <item
+        android:id="@+id/page_3"
+        android:enabled="true"
+        android:title="pembukuan"
+        android:icon="@drawable/warehouse"
+        />
+    <item
+        android:id="@+id/page_4"
+        android:enabled="true"
+        android:title="user"
+        android:icon="@drawable/warehouse"
+        />
 <!--    <item-->
 <!--        android:id="@+id/page_4"-->
 <!--        android:enabled="true"-->

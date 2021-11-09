@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.m.madjumapan.*
 import com.m.madjumapan.SharePreferencesClient.PERSONAL_TOKEN
 import com.m.madjumapan.databinding.FragmentStockBinding
@@ -20,16 +19,16 @@ class StockFragment : Fragment() {
 
 
     private var _binding: FragmentStockBinding? = null
-    private val binding get() = _binding!!
+    private val binding get() = _binding
     private val TAG = "Stock Fragment"
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         _binding = FragmentStockBinding.inflate(inflater, container, false)
-        return binding.root
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -50,7 +49,7 @@ class StockFragment : Fragment() {
                         val body = response.body()
                         Log.d(TAG, "onResponse: ${response.isSuccessful}")
                         Log.d(TAG, "onResponse: ${response.body()}")
-                        binding.apply {
+                        binding?.apply {
                             rvStock.adapter = StocksRv(body?.message?.data as ArrayList<StockResponse.Stock>)
                             rvStock.layoutManager = GridLayoutManager(requireContext(), 2)
                         }

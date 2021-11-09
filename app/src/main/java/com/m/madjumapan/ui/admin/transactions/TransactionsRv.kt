@@ -1,13 +1,16 @@
 package com.m.madjumapan.ui.admin.transactions
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.annotations.SerializedName
 import com.m.madjumapan.R
+import com.m.madjumapan.ui.admin.user.usergudang.DetailUserGudangActivity
 
 
 data class TransactionsResponse(
@@ -26,7 +29,9 @@ data class TransactionsResponse(
         @SerializedName("gudang_id") var gudangId : Int,
         @SerializedName("name_gudang") var nameGudang: String,
         @SerializedName("customer_id") var customerId : String,
+        @SerializedName("name_customer") var nameCustomer: String?,
         @SerializedName("supplier_id") var supplierId : Int,
+        @SerializedName("name_supplier") var nameSupplier: String?,
         @SerializedName("item_name") var itemName : String,
         @SerializedName("item_weight") var itemWeight : String,
         @SerializedName("item_price") var itemPrice : Int,
@@ -55,6 +60,22 @@ class TransactionsRv(val dataset: ArrayList<TransactionsResponse.Data>)  : Recyc
                 findViewById<TextView>(R.id.tvWeight).text = dataset[adapterPosition].itemWeight
                 findViewById<TextView>(R.id.tvPrice).text = dataset[adapterPosition].itemPrice.toString()
                 findViewById<TextView>(R.id.tvTotalPrice).text = dataset[adapterPosition].totalPrice
+                val tvCusSupp = findViewById<TextView>(R.id.tvCusOrSup)
+                if (dataset[adapterPosition].nameCustomer != null) tvCusSupp.text = "Customer " + dataset[adapterPosition].nameCustomer
+                else tvCusSupp.text = "Supplier " + dataset[adapterPosition].nameSupplier
+
+                setOnClickListener {
+//                    val i = Intent(context, DetailTransactionActivity::class.java)
+//                    i.putExtra("item_name", dataset[adapterPosition].itemName)
+//                    i.putExtra("name_gudang", dataset[adapterPosition].nameGudang)
+//                    i.putExtra("item_price", dataset[adapterPosition].itemPrice)
+//                    i.putExtra("total_item_price", dataset[adapterPosition].totalPrice)
+//                    i.putExtra("item_weight", dataset[adapterPosition].itemWeight)
+//                    i.putExtra("created_at", dataset[adapterPosition].createdAt)
+//                    i.putExtra("status", dataset[adapterPosition].status)
+//                    i.putExtra("name_customer", dataset[ad    apterPosition].nameCustomer)
+//                    ContextCompat.startActivity(context, i, null)
+                }
             }
         }
 

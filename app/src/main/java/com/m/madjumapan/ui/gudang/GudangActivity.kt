@@ -24,7 +24,7 @@ class GudangActivity : AppCompatActivity() {
     private fun initFragment() {
         binding.apply {
 
-            supportFragmentManager.beginTransaction().replace(R.id.main_container, StockFragment()).commit()
+            supportFragmentManager.beginTransaction().replace(R.id.main_container, InFragment()).commit()
 
             bottomNavigation.setOnNavigationItemSelectedListener {
                 val fragment: Fragment
@@ -32,14 +32,14 @@ class GudangActivity : AppCompatActivity() {
                 if (itemId == R.id.page_1) {
                     fragment = InFragment()
                     val f =  supportFragmentManager.findFragmentById(R.id.main_container)
-                    if (f !is StockFragment) {
+                    if (f !is InFragment) {
                         val transaction = supportFragmentManager.beginTransaction()
                         transaction.replace(R.id.main_container, fragment).commit()
                     }
                 } else if (itemId == R.id.page_2) {
                     fragment = OutFragment()
                     val f =  supportFragmentManager.findFragmentById(R.id.main_container)
-                    if (f !is TransactionFragment) {
+                    if (f !is OutFragment) {
                         val transaction = supportFragmentManager.beginTransaction()
                         transaction.replace(R.id.main_container, fragment).commit()
                     }

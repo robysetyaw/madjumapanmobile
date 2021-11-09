@@ -8,6 +8,7 @@ import com.m.madjumapan.R
 import com.m.madjumapan.databinding.ActivityAdminBinding
 import com.m.madjumapan.ui.admin.stock.StockFragment
 import com.m.madjumapan.ui.admin.transactions.TransactionFragment
+import com.m.madjumapan.ui.admin.user.UserFragment
 
 class AdminActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAdminBinding
@@ -41,6 +42,15 @@ class AdminActivity : AppCompatActivity() {
                     fragment = TransactionFragment()
                     val f =  supportFragmentManager.findFragmentById(R.id.main_container)
                     if (f !is TransactionFragment) {
+                        val transaction = supportFragmentManager.beginTransaction()
+                        transaction.replace(R.id.main_container, fragment).commit()
+                    }
+                } else if (itemId == R.id.page_3) {
+
+                } else if (itemId == R.id.page_4) {
+                    fragment = UserFragment()
+                    val f =  supportFragmentManager.findFragmentById(R.id.main_container)
+                    if (f !is UserFragment) {
                         val transaction = supportFragmentManager.beginTransaction()
                         transaction.replace(R.id.main_container, fragment).commit()
                     }

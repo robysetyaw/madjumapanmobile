@@ -12,21 +12,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MadjuMapan"
-        android:usesCleartextTraffic="true"
-        >
-        <activity android:name=".CobacobaActivity"></activity>
-        <activity android:name=".ui.gudang.GudangActivity"   android:screenOrientation="portrait"
-            android:configChanges="orientation|keyboardHidden"/>
+        android:usesCleartextTraffic="true">
+        <activity android:name=".ui.admin.transactions.DetailTransactionActivity"></activity>
+        <activity
+            android:name=".ui.admin.user.usergudang.DetailUserGudangActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity android:name=".CobacobaActivity" />
+        <activity
+            android:name=".ui.gudang.GudangActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.admin.AdminActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:exported="true"
-            android:screenOrientation="portrait"
-            android:configChanges="orientation|keyboardHidden"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.LoginActivity"
-            android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
