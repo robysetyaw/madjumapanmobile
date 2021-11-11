@@ -16,6 +16,7 @@ class GudangActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityGudangBinding.inflate(layoutInflater)
         val view = binding.root
+        
         setContentView(view)
 
         initFragment()

@@ -24,7 +24,7 @@
     <item
         android:id="@+id/page_3"
         android:enabled="true"
-        android:title="pembukuan"
+        android:title="nota"
         android:icon="@drawable/warehouse"
         />
     <item
