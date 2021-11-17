@@ -7,6 +7,17 @@
     tools:context=".ui.admin.user.UserFragment">
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btAddUser"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Add User"
+        app:layout_constraintBottom_toTopOf="@+id/btLogout"
+        app:layout_constraintEnd_toEndOf="@+id/btLogout"
+        app:layout_constraintStart_toStartOf="@+id/btLogout" />
+
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btLogout"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="match_parent"
@@ -25,7 +36,7 @@
         android:id="@+id/rvUserGudang"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/btLogout"
+        app:layout_constraintBottom_toTopOf="@+id/btAddUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
