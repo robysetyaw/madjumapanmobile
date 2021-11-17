@@ -2,6 +2,7 @@ package com.m.madjumapan
 
 
 import com.m.madjumapan.ui.admin.transactions.TransactionsResponse
+import com.m.madjumapan.ui.admin.user.InsertUserResponse
 import com.m.madjumapan.ui.gudang.ItemNamesResponse
 import com.m.madjumapan.ui.gudang.UserResponse
 import okhttp3.RequestBody
@@ -52,5 +53,9 @@ interface MadjuMapanApi {
                         @Query("item_name")itemName: String): Call<StockWeightTodayResponse>
 
 
+
+    @POST("api/users/insert")
+    fun insertUser(@Header("Authorization") auth: String,
+                   @Body body: RequestBody): Call<InsertUserResponse>
 
 }
