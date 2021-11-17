@@ -1,5 +1,6 @@
 package com.m.madjumapan.ui.admin.user
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -34,6 +35,7 @@ class UserFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setBtLogout()
         setRv()
+        setBtAddUser()
     }
 
     private fun setRv() {
@@ -70,6 +72,15 @@ class UserFragment : Fragment() {
         binding?.apply {
             btLogout.setOnClickListener {
                 if (SharePreferencesClient.logout(requireContext())) requireActivity().finish()
+            }
+        }
+    }
+
+    private fun setBtAddUser() {
+        binding?.apply {
+            btAddUser.setOnClickListener {
+                val intent = Intent(requireContext(),AddUserActivity::class.java)
+                startActivity(intent)
             }
         }
     }
