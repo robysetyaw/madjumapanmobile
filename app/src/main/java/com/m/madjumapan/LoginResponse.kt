@@ -10,5 +10,9 @@ data class LoginResponse(
 data class Message (
 
     @SerializedName("token") val token : String?,
+    @SerializedName("is_gudang") val isGudang : Int?,
+    @SerializedName("is_customer") val isCustomer : Int?,
+    @SerializedName("is_admin") val isAdmin : Int?,
+    @SerializedName("is_supplier") val isSupplier : Int?,
     @SerializedName("message_failed") val messageFailed : String?
 )
