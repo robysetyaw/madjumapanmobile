@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MadjuMapan"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.admin.transactions.DetailTransactionActivity"></activity>
+        <activity
+            android:name=".ui.admin.user.AddUserActivity"
+            android:exported="false" />
+        <activity android:name=".ui.admin.transactions.DetailTransactionActivity" />
         <activity
             android:name=".ui.admin.user.usergudang.DetailUserGudangActivity"
             android:configChanges="orientation|keyboardHidden"
